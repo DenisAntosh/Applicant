@@ -1,0 +1,132 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+}
+
+form {
+    border-radius: 2px;
+    background-color: white;
+}
+
+input[type="text"],
+input[type="number"] {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+}
+
+
+button[type = "submit"] {
+    float: right;
+    color: #fff;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 50%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 10px;
+}
+
+button[type = "reset"] {
+    color: #fff;
+    background-color: #FF5F62;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 20%;
+    border: 1px solid #FF383B;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 10px;
+}
+
+button[type = "button"] {
+    color: #fff;
+    background-color: #9A9A9A;
+    font-size: 18px;
+    font-style: normal;
+    border-radius: 5px;
+    width: 20%;
+    border: 1px solid #828282;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 2px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+fieldset {
+    margin-bottom: 30px;
+    background-color: white;
+    border: none;
+}
+
+legend {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+li {
+    font-weight: bold;
+}
+
+.find {
+    width: 100% !important;
+}
+
+th {
+    text-align: center;
+    color: #fff;
+    background-color: #706d97;
+}
+td {
+    text-align: center;
+    color: #696969;
+    border-bottom: 1px solid #eee;
+}
+
+td:first-child {
+    width: 150px;
+    min-width: 0;
+}
+
+th:last-child {
+    text-align: right;
+}
+
+td:last-child {
+    width: 80px;
+    min-width: 0;
+    text-align: right;
+}
+
+tr:nth-child(odd) {
+    background-color: #eee;
+}
