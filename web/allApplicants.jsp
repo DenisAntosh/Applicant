@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html>
 <head>
@@ -52,8 +52,10 @@
                     <td>${applicant.speciality.speciality}</td>
                     <td>${applicant.averangeMarkOfTheCertificate}</td>
                     <td>${applicant.ruralCoef}</td>
-                    <td><a href="/update?id=${applicant.id}"><img src="img/edit.png" alt="Edit" width="15" height="15" title="Edit"></a></td>
-                    <td><a href="/delete?id=${applicant.id}"><img src="/img/delete.png" alt="Delete" width="15" height="15" title="Delete"></a></td>
+                    <td><a href="/update?id=${applicant.id}"><img src="img/edit.png" alt="Edit" width="15"
+                                                                  height="15" title="Edit"></a></td>
+                    <td><a href="/delete?id=${applicant.id}"><img src="/img/delete.png" alt="Delete" width="15"
+                                                                  height="15" title="Delete"></a></td>
                 </tr>
             </c:forEach>
         </table>

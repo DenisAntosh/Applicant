@@ -13,12 +13,14 @@ import java.sql.SQLException;
 public class FindByIdServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int id = Integer.parseInt(req.getParameter("id"));
-        try {
-            Applicant applicant = ApplicantDAO.findById(id);
-            req.setAttribute("applicant", applicant);
-        } catch (SQLException | ClassNotFoundException | IndexOutOfBoundsException e) {
-            req.setAttribute("errorCode", e.toString());
+        if(req.getParameter("id") != "") {
+            int id = Integer.parseInt(req.getParameter("id"));
+            try {
+                Applicant applicant = ApplicantDAO.findById(id);
+                req.setAttribute("applicant", applicant);
+            } catch (SQLException | ClassNotFoundException | IndexOutOfBoundsException e) {
+                req.setAttribute("errorCode", e.toString());
+            }
         }
         req.getServletContext().getRequestDispatcher("/findByID.jsp").forward(req, resp);
     }

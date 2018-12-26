@@ -19,46 +19,80 @@
 <p style="color: red;">${errorString}</p>
 <form>
     <table border align="center">
-        <tr>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Surname</th>
-            <th>Passport code</th>
-            <th>Certificate code</th>
-            <th>Name of the first exam</th>
-            <th>Result of the first exam</th>
-            <th>Name of the second exam</th>
-            <th>Result of the second exam</th>
-            <th>Name of the third exam</th>
-            <th>Result of the third exam</th>
-            <th>University</th>
-            <th>Faculty</th>
-            <th>Speciality</th>
-            <th>Average mark of the certificate</th>
-            <th>Rural coefficient</th>
-            <th></th>
-            <th></th>
-        </tr>
         <c:if test="${applicant != null}">
             <tr>
-                <c><td>${applicant.firstName}</td></c>
-                <c><td>${applicant.lastName}</td></c>
-                <c><td>${applicant.surname}</td></c>
-                <c><td>${applicant.passportCode}</td></c>
-                <c><td>${applicant.certificateCode}</td></c>
-                <c><td>${applicant.exam.firstExam.nameOfExam}</td></c>
-                <c><td>${applicant.exam.firstExam.result}</td></c>
-                <c><td>${applicant.exam.secondExam.nameOfExam}</td></c>
-                <c><td>${applicant.exam.secondExam.result}</td></c>
-                <c><td>${applicant.exam.thirdExam.nameOfExam}</td></c>
-                <c><td>${applicant.exam.thirdExam.result}</td></c>
-                <c><td>${applicant.speciality.university}</td></c>
-                <c><td>${applicant.speciality.faculty}</td></c>
-                <c><td>${applicant.speciality.speciality}</td></c>
-                <c><td>${applicant.averangeMarkOfTheCertificate}</td></c>
-                <c><td>${applicant.ruralCoef}</td></c>
-                <td><a href="/update?id=${applicant.id}"><img src="img/edit.png" alt="Edit" width="15" height="15" title="Edit"></a></td>
-                <td><a href="/delete?id=${applicant.id}"><img src="/img/delete.png" alt="Delete" width="15" height="15" title="Delete"></a></td>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Surname</th>
+                <th>Passport code</th>
+                <th>Certificate code</th>
+                <th>Name of the first exam</th>
+                <th>Result of the first exam</th>
+                <th>Name of the second exam</th>
+                <th>Result of the second exam</th>
+                <th>Name of the third exam</th>
+                <th>Result of the third exam</th>
+                <th>University</th>
+                <th>Faculty</th>
+                <th>Speciality</th>
+                <th>Average mark of the certificate</th>
+                <th>Rural coefficient</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <c>
+                    <td>${applicant.firstName}</td>
+                </c>
+                <c>
+                    <td>${applicant.lastName}</td>
+                </c>
+                <c>
+                    <td>${applicant.surname}</td>
+                </c>
+                <c>
+                    <td>${applicant.passportCode}</td>
+                </c>
+                <c>
+                    <td>${applicant.certificateCode}</td>
+                </c>
+                <c>
+                    <td>${applicant.exam.firstExam.nameOfExam}</td>
+                </c>
+                <c>
+                    <td>${applicant.exam.firstExam.result}</td>
+                </c>
+                <c>
+                    <td>${applicant.exam.secondExam.nameOfExam}</td>
+                </c>
+                <c>
+                    <td>${applicant.exam.secondExam.result}</td>
+                </c>
+                <c>
+                    <td>${applicant.exam.thirdExam.nameOfExam}</td>
+                </c>
+                <c>
+                    <td>${applicant.exam.thirdExam.result}</td>
+                </c>
+                <c>
+                    <td>${applicant.speciality.university}</td>
+                </c>
+                <c>
+                    <td>${applicant.speciality.faculty}</td>
+                </c>
+                <c>
+                    <td>${applicant.speciality.speciality}</td>
+                </c>
+                <c>
+                    <td>${applicant.averangeMarkOfTheCertificate}</td>
+                </c>
+                <c>
+                    <td>${applicant.ruralCoef}</td>
+                </c>
+                <td><a href="/update?id=${applicant.id}"><img src="img/edit.png" alt="Edit" width="15" height="15"
+                                                              title="Edit"></a></td>
+                <td><a href="/delete?id=${applicant.id}"><img src="/img/delete.png" alt="Delete" width="15" height="15"
+                                                              title="Delete"></a></td>
             </tr>
         </c:if>
     </table>

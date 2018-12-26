@@ -22,26 +22,28 @@
 <p style="color: red;">${errorString}</p>
 <form>
     <table border align="center">
-        <tr>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Surname</th>
-            <th>Passport code</th>
-            <th>Certificate code</th>
-            <th>Name of the first exam</th>
-            <th>Result of the first exam</th>
-            <th>Name of the second exam</th>
-            <th>Result of the second exam</th>
-            <th>Name of the third exam</th>
-            <th>Result of the third exam</th>
-            <th>University</th>
-            <th>Faculty</th>
-            <th>Speciality</th>
-            <th>Average mark of the certificate</th>
-            <th>Rural coefficient</th>
-            <th></th>
-            <th></th>
-        </tr>
+        <c:if test="${list!= null}">
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Surname</th>
+                <th>Passport code</th>
+                <th>Certificate code</th>
+                <th>Name of the first exam</th>
+                <th>Result of the first exam</th>
+                <th>Name of the second exam</th>
+                <th>Result of the second exam</th>
+                <th>Name of the third exam</th>
+                <th>Result of the third exam</th>
+                <th>University</th>
+                <th>Faculty</th>
+                <th>Speciality</th>
+                <th>Average mark of the certificate</th>
+                <th>Rural coefficient</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </c:if>
         <c:forEach items="${list}" var="applicant">
             <tr>
                 <td>${applicant.firstName}</td>
@@ -60,8 +62,10 @@
                 <td>${applicant.speciality.speciality}</td>
                 <td>${applicant.averangeMarkOfTheCertificate}</td>
                 <td>${applicant.ruralCoef}</td>
-                <td><a href="/update?id=${applicant.id}"><img src="img/edit.png" alt="Edit" width="15" height="15" title="Edit"></a></td>
-                <td><a href="/delete?id=${applicant.id}"><img src="/img/delete.png" alt="Delete" width="15" height="15" title="Delete"></a></td>
+                <td><a href="/update?id=${applicant.id}"><img src="img/edit.png" alt="Edit" width="15" height="15"
+                                                              title="Edit"></a></td>
+                <td><a href="/delete?id=${applicant.id}"><img src="/img/delete.png" alt="Delete" width="15" height="15"
+                                                              title="Delete"></a></td>
             </tr>
         </c:forEach>
     </table>
